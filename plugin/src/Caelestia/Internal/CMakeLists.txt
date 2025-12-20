@@ -1,5 +1,5 @@
-qml_module(caelestia-internal
-    URI Caelestia.Internal
+qml_module(aura-internal
+    URI Aura.Internal
     SOURCES
         cachingimagemanager.hpp cachingimagemanager.cpp
         circularindicatormanager.hpp circularindicatormanager.cpp

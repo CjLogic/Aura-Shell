@@ -1,5 +1,5 @@
 import qs.config
-import Caelestia
+import Aura
 import Quickshell
 import Quickshell.Services.UPower
 import QtQuick

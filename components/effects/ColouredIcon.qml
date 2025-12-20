@@ -1,6 +1,6 @@
 pragma ComponentBehavior: Bound
 
-import Caelestia
+import Aura
 import Quickshell.Widgets
 import QtQuick
 

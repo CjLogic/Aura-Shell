@@ -4,7 +4,7 @@
 #include <qobject.h>
 #include <qqmlintegration.h>
 
-namespace caelestia {
+namespace aura {
 
 class CUtils : public QObject {
     Q_OBJECT
@@ -26,4 +26,4 @@ public:
     Q_INVOKABLE QString toLocalFile(const QUrl& url) const;
 };
 
-} // namespace caelestia
+} // namespace aura

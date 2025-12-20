@@ -1,5 +1,5 @@
 {
-  description = "Desktop shell for Caelestia dots";
+  description = "Desktop shell for Aura dots";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    caelestia-cli = {
-      url = "github:caelestia-dots/cli";
+    aura-cli = {
+      url = "github:CjLogic/aura-cli";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.caelestia-shell.follows = "";
+      inputs.aura-shell.follows = "";
     };
   };
 
@@ -29,7 +29,7 @@
     formatter = forAllSystems (pkgs: pkgs.alejandra);
 
     packages = forAllSystems (pkgs: rec {
-      caelestia-shell = pkgs.callPackage ./nix {
+      aura-shell = pkgs.callPackage ./nix {
         rev = self.rev or self.dirtyRev;
         stdenv = pkgs.clangStdenv;
         quickshell = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
@@ -37,16 +37,16 @@
           withI3 = false;
         };
         app2unit = pkgs.callPackage ./nix/app2unit.nix {inherit pkgs;};
-        caelestia-cli = inputs.caelestia-cli.packages.${pkgs.stdenv.hostPlatform.system}.default;
+        aura-cli = inputs.aura-cli.packages.${pkgs.stdenv.hostPlatform.system}.default;
       };
-      with-cli = caelestia-shell.override {withCli = true;};
-      debug = caelestia-shell.override {debug = true;};
-      default = caelestia-shell;
+      with-cli = aura-shell.override {withCli = true;};
+      debug = aura-shell.override {debug = true;};
+      default = aura-shell;
     });
 
     devShells = forAllSystems (pkgs: {
       default = let
-        shell = self.packages.${pkgs.stdenv.hostPlatform.system}.caelestia-shell;
+        shell = self.packages.${pkgs.stdenv.hostPlatform.system}.aura-shell;
       in
         pkgs.mkShell.override {stdenv = shell.stdenv;} {
           inputsFrom = [shell shell.plugin shell.extras];

@@ -4,7 +4,7 @@
 #include <qsqlquery.h>
 #include <quuid.h>
 
-namespace caelestia {
+namespace aura {
 
 AppEntry::AppEntry(QObject* entry, unsigned int frequency, QObject* parent)
     : QObject(parent)
@@ -262,4 +262,4 @@ void AppDb::updateApps() {
     }
 }
 
-} // namespace caelestia
+} // namespace aura

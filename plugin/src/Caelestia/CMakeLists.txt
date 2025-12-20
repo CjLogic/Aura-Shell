@@ -37,8 +37,8 @@ function(qml_module arg_TARGET)
     target_link_libraries(${arg_TARGET} PRIVATE Qt::Core Qt::Qml ${arg_LIBRARIES})
 endfunction()
 
-qml_module(caelestia
-    URI Caelestia
+qml_module(aura
+    URI Aura
     SOURCES
         cutils.hpp cutils.cpp
         qalculator.hpp qalculator.cpp

@@ -2,8 +2,8 @@ pragma Singleton
 
 import qs.components.misc
 import qs.config
-import Caelestia
-import Caelestia.Internal
+import Aura
+import Aura.Internal
 import Quickshell
 import Quickshell.Hyprland
 import Quickshell.Io
@@ -46,7 +46,7 @@ Singleton {
     }
 
     function reloadDynamicConfs(): void {
-        extras.batchMessage(["keyword bindlni ,Caps_Lock,global,caelestia:refreshDevices", "keyword bindlni ,Num_Lock,global,caelestia:refreshDevices"]);
+        extras.batchMessage(["keyword bindlni ,Caps_Lock,global,aura:refreshDevices", "keyword bindlni ,Num_Lock,global,aura:refreshDevices"]);
     }
 
     Component.onCompleted: reloadDynamicConfs()

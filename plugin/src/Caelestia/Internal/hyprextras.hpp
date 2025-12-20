@@ -5,14 +5,14 @@
 #include <qobject.h>
 #include <qqmlintegration.h>
 
-namespace caelestia::internal::hypr {
+namespace aura::internal::hypr {
 
 class HyprExtras : public QObject {
     Q_OBJECT
     QML_ELEMENT
 
     Q_PROPERTY(QVariantHash options READ options NOTIFY optionsChanged)
-    Q_PROPERTY(caelestia::internal::hypr::HyprDevices* devices READ devices CONSTANT)
+    Q_PROPERTY(aura::internal::hypr::HyprDevices* devices READ devices CONSTANT)
 
 public:
     explicit HyprExtras(QObject* parent = nullptr);
@@ -53,4 +53,4 @@ private:
     SocketPtr makeRequest(const QString& request, const std::function<void(bool, QByteArray)>& callback);
 };
 
-} // namespace caelestia::internal::hypr
+} // namespace aura::internal::hypr

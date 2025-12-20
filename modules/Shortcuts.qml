@@ -1,7 +1,7 @@
 import qs.components.misc
 import qs.modules.controlcenter
 import qs.services
-import Caelestia
+import Aura
 import Quickshell
 import Quickshell.Io
 

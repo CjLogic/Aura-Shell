@@ -2,7 +2,7 @@
 
 #include <libqalculate/qalculate.h>
 
-namespace caelestia {
+namespace aura {
 
 Qalculator::Qalculator(QObject* parent)
     : QObject(parent) {
@@ -49,4 +49,4 @@ QString Qalculator::eval(const QString& expr, bool printExpr) const {
     return QString::fromStdString(result);
 }
 
-} // namespace caelestia
+} // namespace aura

@@ -6,7 +6,7 @@
 #include <qqmllist.h>
 #include <qtimer.h>
 
-namespace caelestia {
+namespace aura {
 
 class AppEntry : public QObject {
     Q_OBJECT
@@ -66,7 +66,7 @@ class AppDb : public QObject {
     Q_PROPERTY(QString uuid READ uuid CONSTANT)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged REQUIRED)
     Q_PROPERTY(QObjectList entries READ entries WRITE setEntries NOTIFY entriesChanged REQUIRED)
-    Q_PROPERTY(QQmlListProperty<caelestia::AppEntry> apps READ apps NOTIFY appsChanged)
+    Q_PROPERTY(QQmlListProperty<aura::AppEntry> apps READ apps NOTIFY appsChanged)
 
 public:
     explicit AppDb(QObject* parent = nullptr);
@@ -103,4 +103,4 @@ private:
     void updateApps();
 };
 
-} // namespace caelestia
+} // namespace aura

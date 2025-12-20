@@ -5,7 +5,7 @@
 #include <QtDBus/qdbusinterface.h>
 #include <QtDBus/qdbusreply.h>
 
-namespace caelestia::internal {
+namespace aura::internal {
 
 LogindManager::LogindManager(QObject* parent)
     : QObject(parent) {
@@ -62,4 +62,4 @@ void LogindManager::handleUnlockRequested() {
     emit unlockRequested();
 }
 
-} // namespace caelestia::internal
+} // namespace aura::internal

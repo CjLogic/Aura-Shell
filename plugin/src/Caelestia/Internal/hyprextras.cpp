@@ -5,7 +5,7 @@
 #include <qlocalsocket.h>
 #include <qvariant.h>
 
-namespace caelestia::internal::hypr {
+namespace aura::internal::hypr {
 
 HyprExtras::HyprExtras(QObject* parent)
     : QObject(parent)
@@ -214,4 +214,4 @@ HyprExtras::SocketPtr HyprExtras::makeRequest(
     return socket;
 }
 
-} // namespace caelestia::internal::hypr
+} // namespace aura::internal::hypr
