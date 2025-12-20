@@ -41,7 +41,7 @@ and likely to be unstable/have bugs. Regular users are recommended to use the st
 You can run the shell directly via `nix run`:
 
 ```sh
-nix run github:Aura-Dots/shell
+nix run github:CjLogic/aura-shell
 ```
 
 Or add it to your system configuration:
@@ -52,7 +52,7 @@ Or add it to your system configuration:
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     aura-shell = {
-      url = "github:CjLogic/Aura-Shell";
+      url = "github:CjLogic/aura-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -73,7 +73,7 @@ For home-manager, you can also use the aura's home manager module (explained in 
 
 Dependencies:
 
--   [`aura-cli`](https://github.com/Aura-Dots/cli)
+-   [`aura-cli`](https://github.com/CjLogic/aura-cli)
 -   [`quickshell-git`](https://quickshell.outfoxxed.me) - this has to be the git version, not the latest tagged version
 -   [`ddcutil`](https://github.com/rockowitz/ddcutil)
 -   [`brightnessctl`](https://github.com/Hummer12007/brightnessctl)
