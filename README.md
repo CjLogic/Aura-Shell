@@ -2,9 +2,9 @@
 
 <div align=center>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Aura-Dots/shell?style=for-the-badge&labelColor=101418&color=9ccbfb)
-![GitHub Repo stars](https://img.shields.io/github/stars/Aura-Dots/shell?style=for-the-badge&labelColor=101418&color=b9c8da)
-![GitHub repo size](https://img.shields.io/github/repo-size/Aura-Dots/shell?style=for-the-badge&labelColor=101418&color=d3bfe6)
+![GitHub last commit](https://img.shields.io/github/last-commit/CjLogic/aura-shell?style=for-the-badge&labelColor=101418&color=9ccbfb)
+![GitHub Repo stars](https://img.shields.io/github/stars/CjLogic/aura-shell?style=for-the-badge&labelColor=101418&color=b9c8da)
+![GitHub repo size](https://img.shields.io/github/repo-size/CjLogic/aura-shell?style=for-the-badge&labelColor=101418&color=d3bfe6)
 [![Ko-Fi donate](https://img.shields.io/badge/donate-kofi?style=for-the-badge&logo=ko-fi&logoColor=ffffff&label=ko-fi&labelColor=101418&color=f16061&link=https%3A%2F%2Fko-fi.com%2Fsoramane)](https://ko-fi.com/soramane)
 
 </div>
@@ -41,7 +41,7 @@ and likely to be unstable/have bugs. Regular users are recommended to use the st
 You can run the shell directly via `nix run`:
 
 ```sh
-nix run github:Aura-Dots/shell
+nix run github:CjLogic/aura-shell
 ```
 
 Or add it to your system configuration:
@@ -52,7 +52,7 @@ Or add it to your system configuration:
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     aura-shell = {
-      url = "github:CjLogic/Aura-Shell";
+      url = "github:CjLogic/aura-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -73,7 +73,7 @@ For home-manager, you can also use the aura's home manager module (explained in 
 
 Dependencies:
 
--   [`aura-cli`](https://github.com/Aura-Dots/cli)
+-   [`aura-cli`](https://github.com/CjLogic/aura-cli)
 -   [`quickshell-git`](https://quickshell.outfoxxed.me) - this has to be the git version, not the latest tagged version
 -   [`ddcutil`](https://github.com/rockowitz/ddcutil)
 -   [`brightnessctl`](https://github.com/Hummer12007/brightnessctl)
@@ -105,7 +105,7 @@ Then simply build and install using `cmake`.
 
 ```sh
 cd $XDG_CONFIG_HOME/quickshell
-git clone https://github.com/CjLogic/Aura-Shell.git aura
+git clone https://github.com/CjLogic/aura-shell.git aura
 
 cd aura
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/
